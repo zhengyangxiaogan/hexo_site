@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>处理器相关知识概要 | 流浪的少年</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">处理器相关知识概要</h1><a id="logo" href="/.">流浪的少年</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">处理器相关知识概要</h1><div class="post-meta">Sep 4, 2017<span> | </span><span class="category"><a href="/categories/计算机体系结构/">计算机体系结构</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">Contents</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#处理器性能评估标准"><span class="toc-number">1.</span> <span class="toc-text">处理器性能评估标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流水线相关"><span class="toc-number">2.</span> <span class="toc-text">流水线相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单周期还是流水线设计"><span class="toc-number">2.1.</span> <span class="toc-text">单周期还是流水线设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MIPS的指令集是针对流水线做了优化的"><span class="toc-number">2.2.</span> <span class="toc-text">MIPS的指令集是针对流水线做了优化的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#流水线冒险"><span class="toc-number">2.3.</span> <span class="toc-text">流水线冒险</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU执行指令的流水线"><span class="toc-number">2.4.</span> <span class="toc-text">CPU执行指令的流水线</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指令集并行"><span class="toc-number">3.</span> <span class="toc-text">指令集并行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#增加流水线并行度的方法"><span class="toc-number">3.1.</span> <span class="toc-text">增加流水线并行度的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#静态多发射处理器"><span class="toc-number">3.2.</span> <span class="toc-text">静态多发射处理器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态多发射处理器（超标量）"><span class="toc-number">3.3.</span> <span class="toc-text">动态多发射处理器（超标量）</span></a></li></ol></li></ol></div></div><div class="post-content"><p><a href="https://textbooks.elsevier.com/web/product_details.aspx?isbn=9780124077263" target="_blank" rel="external">《计算机组成与设计——软件/硬件接口》</a> 第四章</p>
+<h3 id="处理器性能评估标准"><a href="#处理器性能评估标准" class="headerlink" title="处理器性能评估标准"></a>处理器性能评估标准</h3><ul>
+<li>指令数</li>
+<li>CPI（执行每条指令需要的周期数）</li>
+<li>时钟周期的长度</li>
+</ul>
+<h3 id="流水线相关"><a href="#流水线相关" class="headerlink" title="流水线相关"></a>流水线相关</h3><h4 id="单周期还是流水线设计"><a href="#单周期还是流水线设计" class="headerlink" title="单周期还是流水线设计"></a>单周期还是流水线设计</h4><ul>
+<li>单周期<ul>
+<li>一个时钟周期执行一条指令指令的实现机制，时钟周期对所有指令等长，时钟周期由执行时间最长的那条指令决定，使得指令执行的性能不是太好</li>
+</ul>
+</li>
+<li>流水线设计</li>
+</ul>
+<h4 id="MIPS的指令集是针对流水线做了优化的"><a href="#MIPS的指令集是针对流水线做了优化的" class="headerlink" title="MIPS的指令集是针对流水线做了优化的"></a>MIPS的指令集是针对流水线做了优化的</h4><ul>
+<li>所有的MIPS指令长度都是等长的，简化了取指和译码的过程</li>
+<li>MIPS中指令的格式比较少而且指令中源寄存器字段的位置都是相同的</li>
+<li>MIPS中的存储器操作数仅出现在存取指令中</li>
+<li>所有的操作数在存储器中对齐，实现一次访存就完成请求数据的传输</li>
+</ul>
+<h4 id="流水线冒险"><a href="#流水线冒险" class="headerlink" title="流水线冒险"></a>流水线冒险</h4><ul>
+<li>结构冒险：处理器硬件不能实现指令的流水线执行，导致指令无法在固定的时钟周期内执行。</li>
+<li>数据冒险：无法提供指令执行所需数据导致指令不能在预定的时钟周期内执行的情况。<ul>
+<li>主要原因：一条指令依赖于更早一条还在流水线中的指令造成的。</li>
+<li>解决方法：是采取 <strong>前推</strong> 或者 <strong>旁路</strong> 的方法。 </li>
+</ul>
+</li>
+<li>控制冒险：也称为 <strong>分支冒险</strong>，取到的指令并不是所需要的而导致指令不能在预定的时钟周期内执行。<ul>
+<li>解决方法：<ul>
+<li>流水线阻塞</li>
+<li>分支预测：预测分支结果并立即执行，而不是等分支结果确定以后才开始执行。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="CPU执行指令的流水线"><a href="#CPU执行指令的流水线" class="headerlink" title="CPU执行指令的流水线"></a>CPU执行指令的流水线</h4><ul>
+<li>取指：从指令存储器读取指令</li>
+<li>译码：指令译码的同时读取寄存器（MIPS允许指令译码和读取寄存器）</li>
+<li>执行：执行操作或者计算地址</li>
+<li>数据存储器访问：从数据存储器中读取操作数</li>
+<li>写回：将结果写回寄存器<br><img src="http://ouz84kogh.bkt.clouddn.com/processor/pipeline.png" alt=""></li>
+</ul>
+<h3 id="指令集并行"><a href="#指令集并行" class="headerlink" title="指令集并行"></a>指令集并行</h3><h4 id="增加流水线并行度的方法"><a href="#增加流水线并行度的方法" class="headerlink" title="增加流水线并行度的方法"></a>增加流水线并行度的方法</h4><ul>
+<li>增加流水线的深度以及重叠更多的指令。</li>
+<li>复制计算机内部部件的数量，使得每个流水线可以启动多条指令（即多发射）。<ul>
+<li>静态多发射：编译器静态编译进行的。</li>
+<li>动态多发射：指令在执行时由处理器部件动态进行的。</li>
+</ul>
+</li>
+</ul>
+<h4 id="静态多发射处理器"><a href="#静态多发射处理器" class="headerlink" title="静态多发射处理器"></a>静态多发射处理器</h4><ul>
+<li>发射包：在一个时钟周期内发射的多条指令的集合。</li>
+<li>超长指令字：一类可以同时启动多个操作的指令集，其中操作在单个指令中互相独立，并且一般都有独立的操作码段。</li>
+<li>寄存器重命名：在循环展开的时候，编译器引入几个临时的寄存器。目的是消除指令之间一些虚假的数据依赖，这些虚假的数据依赖可能导致潜在的冒险或者妨碍编译器灵活的调度。</li>
+</ul>
+<h4 id="动态多发射处理器（超标量）"><a href="#动态多发射处理器（超标量）" class="headerlink" title="动态多发射处理器（超标量）"></a>动态多发射处理器（超标量）</h4><blockquote>
+<p>在最简单的超标量处理器中，指令顺序发射，每个周期处理器决定是发射0条、1条还是多条指令，要达到好的性能依然依赖编译器的调度以达到错过数据依赖的目的。但是不管代码是否经过调度，都是由硬件来保证执行的正确性。而且编译器得到的代码始终正确执行，跟处理器的流水线结构和指令发射速率无关。</p>
+</blockquote>
+<p>动态流水线调度：对指令进行重排序以避免阻塞的硬件支持。</p>
+<ul>
+<li>提交单元：位于动态流水线和乱序流水线中的一个单元，用以决定何时将结果送至程序员可见的寄存器和存储器。</li>
+<li>功能单元：用来保存操作数和寄存器。</li>
+<li>重排序缓冲区（<strong>提交单元中</strong>的缓冲区，reorder buffer）：动态调度处理器中用来保存执行结果的缓冲区，等到安全时才将其中的结果写回寄存器或存储器。</li>
+</ul>
+<p><img src="http://ouz84kogh.bkt.clouddn.com/processor/dynamically_scheduled_pipeline.png" alt=""></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2017/09/04/处理器相关知识概要/" data-id="cj769nb590000lsuvag4ppkjr" class="article-share-link">Share</a><div class="tags"><a href="/tags/处理器/">处理器</a></div><div class="post-nav"><a href="/2017/08/23/Linux常用命令/" class="next">Linux常用命令</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/操作系统/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机体系结构/">计算机体系结构</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/处理器/" style="font-size: 15px;">处理器</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/体系结构/" style="font-size: 15px;">体系结构</a> <a href="/tags/OS/" style="font-size: 15px;">OS</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/09/04/处理器相关知识概要/">处理器相关知识概要</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/23/Linux常用命令/">Linux常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/20/死锁/">死锁</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/05/hexo使用/">Hexo使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/05/计算机体系结构的区别/">计算机存储结构的区别</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://labrick.cc/" title="工作实验室" target="_blank">工作实验室</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 <a href="/." rel="nofollow">流浪的少年.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
