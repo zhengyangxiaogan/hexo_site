@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>2017年大疆嵌入式秋招求职总结 | </title>
+    <meta name="author" content="zhengyang">
+    
+    <meta name="description" content="大疆应该算是自己秋招准备最充分的一家公司了，一路闯入终面，无奈自身实力有限加上临场发挥不太顺利，最终没有拿到offer，在此记录一下自己的大疆求职历程。">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="2017年大疆嵌入式秋招求职总结"/>
+    <meta property="og:site_name" content="流浪的少年"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="流浪的少年" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">流浪的少年</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/C-C/">
+                    C-C <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/计算机体系结构/">
+                    计算机体系结构 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/操作系统/">
+                    操作系统 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>2017年大疆嵌入式秋招求职总结</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2017-11-15T09:21:37.000Z"><a href="/2017/11/15/DJI/">2017-11-15</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/求职/" class="chip green lighten-1">求职</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#性格测试"><span class="section table-of-contents-text">性格测试</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#大疆的企业文化"><span class="section table-of-contents-text">大疆的企业文化</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#大疆的新闻事件"><span class="section table-of-contents-text">大疆的新闻事件</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#大疆的产品"><span class="section table-of-contents-text">大疆的产品</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#其他"><span class="section table-of-contents-text">其他</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#主观题目"><span class="section table-of-contents-text">主观题目</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#面试历程"><span class="section table-of-contents-text">面试历程</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#初面"><span class="section table-of-contents-text">初面</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#终面"><span class="section table-of-contents-text">终面</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#笔试阶段"><span class="section table-of-contents-text">笔试阶段</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#简答题目"><span class="section table-of-contents-text">简答题目</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#编程题目（不用AC）"><span class="section table-of-contents-text">编程题目（不用AC）</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#惜别大疆"><span class="section table-of-contents-text">惜别大疆</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>大疆应该算是自己秋招准备最充分的一家公司了，一路闯入终面，无奈自身实力有限加上临场发挥不太顺利，最终没有拿到offer，在此记录一下自己的大疆求职历程。<br><a id="more"></a><br>2017年大疆的招聘主要分为提前批和秋招2部分，提前批的时候（大概5月份左右），实验室师兄在群里发了招聘链接，但当时认为自己很多书都没有看，就没有投递简历，很可惜错过了在线测评。事实上大疆提前批对于秋招没有任何影响，应该给自己一次试错的机会。<br>大疆秋招的的简历投递时间节点是2017-09-15号截止，我大概是9月10号左右投递的简历，很顺利的就通过了简历筛选，大概2~3天左右的时间就收到了性格测试的链接。这里需要说的是，尽量不要在简历投递截止日期前投递简历，因为大疆今年投递人数飙升，后面根本没有充足的时间安排面试，我怀疑实验室有几个同学就是因为这个原因没有通过简历筛选的。</p>
+<h3 id="性格测试"><a href="#性格测试" class="headerlink" title="性格测试"></a>性格测试</h3><p>题型上都是选择题，要求收到测试链接的48小时内完成，当时40多分钟就完成了测试，感觉时间上绰绰有余。每年网上关于DJI的求职讨论，性格测试是一个避不开的问题，很多大佬都是栽在这一关上。提前批的时候，我们实验室4个人做了评测，其中只有1个人通过了这个测试，筛选率低到恐怖。通过在网上搜集资料，我主要从以下几方面来准备大疆的性格测试</p>
+<h4 id="大疆的企业文化"><a href="#大疆的企业文化" class="headerlink" title="大疆的企业文化"></a>大疆的企业文化</h4><p>大疆一直标榜自己需要“敢于说真话”、“有真知灼见”、“敢打敢拼”的员工，这个和创始人汪涛的影响不无关系，而且大疆作为一家创业型的公司，具有加班多、工程师文化浓厚的特点。这部分内容，需要多看看网上关于汪涛创业的逸事和新闻稿，有助于我们对创始人和公司文化的了解。在性格测试中，有部分题目会直面求职者的内心世界，我举出几项内容仅供参考</p>
+<ul>
+<li>当自己和同事有意见分歧的时候，是在会上直接了当的指出问题还是会后找主管或者同事沟通？</li>
+<li>自己大学时候参加竞赛，当时心里状态如何：“我要赢”还是“注重体验参赛的过程“？</li>
+<li>当自己处于繁忙的工作状态时，女朋友突然来信息了，这时你会怎么做：直接回复信息？假装没看到，等忙完了工作再回复？简短回复自己在工作，待会给她打电话？</li>
+</ul>
+<h4 id="大疆的新闻事件"><a href="#大疆的新闻事件" class="headerlink" title="大疆的新闻事件"></a>大疆的新闻事件</h4><p>DJI无人机现在享誉全球，在高速发展的过程中，也会碰到各种各样的问题，有用户的投诉、竞争对手的诘难、还有政府部门的严格监管，促使公司对自己的产品和服务做出了一系列的调整。我把知乎上主题关于“大疆”的页面刷了个遍，性格测评中碰到了这么一个问题</p>
+<ul>
+<li>是否有必要在无人机上加装SIM卡以跟踪用户行为数据？<a href="https://zhuanlan.zhihu.com/p/26591612" target="_blank" rel="external">https://zhuanlan.zhihu.com/p/26591612</a> ，其中牵扯到目前民用无人机市场的利益争夺，而且海外市场销售的时候，用户隐私权所带来的法律问题也值得重视，因此需要慎重对待。</li>
+</ul>
+<h4 id="大疆的产品"><a href="#大疆的产品" class="headerlink" title="大疆的产品"></a>大疆的产品</h4><p>大疆以无人机起家，以影视航拍傲视全球，性格测试中也涉及到求职者对无人机产品的认识，如</p>
+<ul>
+<li>是否需要在无人机上安装紧急制动的按钮，当无人机要和直升机碰撞的时候，可以很好的规避此类风险？</li>
+</ul>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>剩下的题目，就是考察求职者的逻辑推理能力和知识面了，在此不再赘述。</p>
+<h3 id="主观题目"><a href="#主观题目" class="headerlink" title="主观题目"></a>主观题目</h3><p>这部分题目是在提前批的时候没有的，性格测试结果提交过后几天，邮箱就收到了客观题的测试链接。由于之前有同学已经做过了这部分的题目，所以我提前准备了一下</p>
+<ul>
+<li>谈一谈安全距离和车速的关系？</li>
+<li>谈一谈安全距离和车流量的关系？</li>
+<li>介绍一下你最喜欢大疆的哪一款产品，介绍功的同时说出其吸引你的地方？谈一谈你对大疆发展的看法？</li>
+</ul>
+<p>题目要求1个小时内完成，没有摄像头监控，可以从网上查询资料。我在前期准备充分的情况下，手打答案，只是刚刚好完成了题目。个人感觉这部分题目并不是为了筛选求职者，前2个问题大概是看看个人的语言组织和逻辑思维能力，重点应该是第3个问题，意在从广大求职者那里搜集一下意见。世界上有2种伟大的公司，一种是快速的满足用户的需求痛点，还有一种是主动挖掘用户的需求痛点，让用户买单。</p>
+<h3 id="面试历程"><a href="#面试历程" class="headerlink" title="面试历程"></a>面试历程</h3><h4 id="初面"><a href="#初面" class="headerlink" title="初面"></a>初面</h4><p>2017-09-19 下午三点多先收到大疆面试的短信和邮件，上面写着可以预约面试时间，结果突然又收到一条邮件说晚上20:20~21:00进行一面。整个人一下子紧张起来，赶紧把操作系统中的相关知识梳理了一遍，然后准备自我介绍和简历项目（主要是面试的太少怕准备不足）。晚上七点多就做到实验室的小办公室里把简历、电脑、纸、笔等东西准备好，预备接下来的电话面试。可是一直等到了20:50才接到大疆工程师的电话（来自广东深圳的座机），说今天还有点事情比较忙，问我是否接受再等半小时再进行面试。当时犹豫了一下，本来想推迟面试的，后来还是决定再等等，毕竟面试机会来之不易。于是又等到了21:20左右，大疆工程师准时打来了电话。工程师就说今天的面试分为三部分，首先是3~5分钟的自我介绍（包含背景、项目简介等），然后是他问问题我来回答，然后是我来提问，总时间大概是40分钟左右。</p>
+<p>由于提前准备了一下自我介绍，说起来还比较流畅，将自己的专业背景、知识背景（计算机体系结构、操作系统）还有项目概要简单说明了下，因为考虑到大疆工程师正在看自己的简历，所以我也是按照简历上说明的讲述。讲完以后，他开始问我简历上写的东西，比如我写的熟悉操作系统，他就问我熟悉什么操作系统以及熟悉操作系统的哪部分（回答Linux，操作系统中进程线程管理、调度算法、内存管理等），然后谈到我熟悉的是C语言，就问我变量的作用域问题以及变量加入static以后在内存中存储位置有什么变化（从栈中移到了数据段中）。</p>
+<p>这之后就开始按照简历一个项目一个项目的过，首先问我所有项目中最拿手的项目，我回答课题做的还不是很完善，HW项目也是一个研究性的课题，就一个xmos的音乐盒子项目比较拿手一点。然后就开始讲项目中的点，比如我碰到的印象比较深刻的点（1、晶振电压问题，2、三种功能分步切换启动的问题）。然后还重点问了HW项目，提到是否用到最新的神经网络算法进行优化处理。我回答这一块是由做算法的同学来进行优化。最后就开始聊对大疆的认识和看法，自己在前期看了大量大疆的新闻和产品视频，因此聊的还比较顺利。</p>
+<h4 id="终面"><a href="#终面" class="headerlink" title="终面"></a>终面</h4><p>几天之后，收到了大疆终面的邮件，心里非常忐忑。因为我有同学今年经历了2轮甚至3轮电话面，而自己一轮就到终面了，也许终面的时候会加大难度。担心也是多余的，只能老老实实看书，2017-09-28 一大早就从南京坐火车赶到上海大疆分部。DJI上海公司位于张江高科地铁站附近，周围分布了ZTE、芯原等一系列公司，还是很有科技氛围的。有室友老马在里面实习，带着我熟悉环境之后就去吃饭了，大概13点在公司前台签到，看着签到表上满页满页的名字，压力非常大，嵌入式这一项今天就有17个名单，而像这样的面试已经持续了四五天之久，竞争很激烈。签到流程搞定之后就在工作间里等着面试，2点多一点被HR叫到名单开始面试。 面试官年龄算是有点偏大的（40岁左右，头都秃了），首先介绍面试的时间是20min，主要问了如下的东西：</p>
+<ul>
+<li>用3句话介绍自己的优点</li>
+<li>我的项目中涉及音频，然后开始问I2S协议是什么？I2S中左右对齐是干嘛的？这个有点忘记了，后来还是画出来了，最懵逼的是问我I2S协议为什么需要左右对齐？没有回答出来，因为自己用I2S的时候没有用到这么深入。</li>
+<li>问我相比别的求职者的优势在哪里？我回答说对体系结构比较了解，结果就悲剧了，给自己埋了坑。问RISC和CISC的区别，以及从程序员的角度看在编程的时候需要注意什么区别？这里没有回答出来，开始往cache方向引，问cache line为什么要这么大？cache中组关联和全关联的区别，简要介绍下二者的区别。</li>
+<li>接着问我自己相比别人的技术优势在哪里，心态在这个时候开始有点崩了，不敢随便说，就说用C语言比较熟悉，然后问C语言的代码量？用C语言是否写过什么工具？自己在平时编程的时候碰到问题如何解决的？由于刚结束xmos项目，于是开始往FIFO方面引。总之感觉没有突出自己的特色，自己确实除了工作以外没有用C语言写过其他的东西，给面试官的感觉就是刷题和做项目，并没有一种对技术的热情~~</li>
+<li>最后面试官说目前社会上很多人对大疆有一些负面的评价，你是怎么看待这个问题的？对大疆无人机发展的看法？<br>整场面试下来，感触就是面试官知识面是非常广的，对体系结构和嵌入式编程方面都非常熟悉，问题都是先抛出某个点，我回答出“是什么”以后，再深入挖掘“为什么”。从个人角度来看，自己对知识点的理解不够到位，主要是局限于知识点“是什么”阶段，对于这个技术点的设计哲学确实关注过少，导致面试官问一些宽泛的点不知道着眼点在哪里。还有就是平时自己的技术积累不够到位，代码量和工程经验不足，面试底气不够。</li>
+</ul>
+<h3 id="笔试阶段"><a href="#笔试阶段" class="headerlink" title="笔试阶段"></a>笔试阶段</h3><p>本来面试后觉得没戏了，可是国庆节前收到了笔试的邮件，说我“一路过关斩将，进入了笔试环节，离拿offer只差一步之遥”。当时那个激动啊，起死回生的感觉。笔试时间是国庆收假后的第一个工作日 2017-10-09 19:00，平台是赛码网。<br>题目还算比较常规，分为单选、多选、填空、简答和编程4个环节：<br>单选、多选和填空主要考察的点是Linux使用、操作系统相关概念、RTOS知识点、数据结构和C语言基础</p>
+<h4 id="简答题目"><a href="#简答题目" class="headerlink" title="简答题目"></a>简答题目</h4><ul>
+<li>说说软件性能优化的思路和方法</li>
+<li>DSP和ARM处理器的区别</li>
+<li>内核态和用户态通信的方法</li>
+<li>有7克、2克砝码各一个，天平一只，如何用这些物品三次将140克的盐分成50、90克各一份</li>
+</ul>
+<h4 id="编程题目（不用AC）"><a href="#编程题目（不用AC）" class="headerlink" title="编程题目（不用AC）"></a>编程题目（不用AC）</h4><ul>
+<li>用尽可能简短的代码实现二叉树节点的个数统计</li>
+<li>用冒泡排序实现链表节点的排序</li>
+</ul>
+<h3 id="惜别大疆"><a href="#惜别大疆" class="headerlink" title="惜别大疆"></a>惜别大疆</h3><p>和我一起面试的室友很早就收到了大疆工程师的电话，而我这边完全没人联系，陆陆续续在大疆交流群看到有同学笔试或者面试未通过，心情一下子又跌入谷底了。大概10月中旬的时候，突然间又收到大疆工程师联系的电话，说现在面试结果提交总部审核，问我签约意愿之类的，当然是满口的答应了。然后是陷入漫长的审核等待……到了10月底的时候，得知审核未通过……心里真是满满的失落，无以言表……</p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2017/09/10/C语言常用库函数实现/" rel="next" title="C语言常用库函数实现">
+    下一篇：C语言常用库函数实现
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMTgxNy84Mzgx">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2017 流浪的少年, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
